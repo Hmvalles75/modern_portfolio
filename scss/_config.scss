@@ -1,0 +1,14 @@
+$primary-color: #2c313f;
+$secondary-color: #efa700;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+}
