@@ -62,4 +62,7 @@
   main#home h1 {
     margin-top: 10vh;
   }
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }

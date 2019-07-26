@@ -115,12 +115,14 @@ h3 {
   h3.lg-heading {
     font-size: 6rem;
     letter-spacing: -0.5rem;
-    line-height: 4rem; }
+    line-height: 3rem;
+    margin-top: 100px; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem; }
+    padding: 0.2rem 1rem;
+    margin-top: 2rem; }
 
 a {
   color: #fff;
@@ -172,6 +174,35 @@ main {
   padding: 0.5rem;
   border-bottom: solid 5px #efa700; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: 1fr; }
+  .projects img {
+    width: 100%;
+    border: #fff solid 3px; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #efa700;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #efa700;
+    color: set-text-color(#efa700); }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #8baccb;
+  color: #333; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -209,4 +240,6 @@ main {
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
