@@ -21,7 +21,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 200;
+  font-weight: 300;
 
   &.lg-heading {
     font-size: 6rem;
@@ -52,9 +52,22 @@ header {
 }
 
 main {
-  padding: 2rem;
-  //height: 100%;
+  padding: 4rem;
+  height: 100%;
   min-height: calc(100vh - 60px);
+
+  .icons-main {
+    margin-top: 1rem;
+
+    a {
+      padding: 1rem;
+      @include easeOut;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
 
   &#home {
     overflow: hidden;
@@ -103,16 +116,33 @@ main {
   border-bottom: solid 5px $secondary-color;
 }
 
+.devicons {
+  display: block;
+  font-size: 60px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10ps;
+}
+
+.skills {
+  align-items: center;
+  text-align: center;
+}
+
 //Work/Projects Page
 
 .projects {
-  display: grid;
+  display: flex;
   grid-gap: 0.7rem;
   grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 100%;
     border: #fff solid 3px;
+    max-width: 1000px;
 
     &:hover {
       opacity: 0.5;
@@ -122,10 +152,62 @@ main {
   }
 }
 
+.description {
+  background: lighten($primary-color, 5);
+  padding: 0.5rem;
+  border-bottom: solid 5px $secondary-color;
+  max-width: 1000px;
+  padding-top: 10px;
+}
+
+//Contact Page
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: $primary-color;
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+}
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  a {
+    padding: 1.25rem;
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
 //Button Styles
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  max-width: 130px;
+  padding: 0.4rem 0.9rem;
   border: 0;
   margin-bottom: 0.3rem;
 
