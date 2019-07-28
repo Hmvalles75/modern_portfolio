@@ -172,12 +172,12 @@ main {
   div {
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     margin-bottom: 3rem;
     @include easeOut;
 
     &:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 0.5rem;
       background: $secondary-color;
       color: $primary-color;
       span {
